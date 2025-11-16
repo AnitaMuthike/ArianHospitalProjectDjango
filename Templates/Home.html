@@ -1,0 +1,298 @@
+{% load static %}
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arian Hospital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'styles/Home.css' %}">
+ </head>
+ <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle shadow-sm fixed-top">
+      <div class="container-fluid">
+         <a href="{% url 'Home' %}" class="navbar-brand d-flex align-items-center" >
+            <div class="fw-bold  fs-3">
+               <img src="{% static 'Images/Arian_logo.png' %}" alt="Arian hospital logo" width="100" height="100" class="logo">
+               <div class="small fw-bold text-primary">Arian Hospital</div>
+            </div>
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="main_nav" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+         </button> 
+         
+         <div class="collapse navbar-collapse justify-content-end Roboto fw-bold  text-primary" 
+         id="main_nav">
+         <ul class="navbar-nav">
+            <li class="nav-item">
+               <a href="{% url 'About' %}" class="nav-link">About us</a>
+            </li>
+            <li class="nav-item">
+               <a href="{% url 'Services' %}" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+               <a href="{% url 'Departments' %}" class="nav-link">Our Departments</a>
+            </li>
+            <li class="nav-item">
+               <a href="{% url 'Doctors' %}" class="nav-link">Doctors</a>
+            </li>
+            <li class="nav-item">
+               <a href="{% url 'Appointments' %}" class="nav-link">Appointments</a>
+            </li>
+            <li class="nav-item">
+               <a href="{% url 'Admin' %}" class="nav-link">Admin login</a>
+            </li>
+            <li class="nav-item">
+               <a href="{% url 'Contacts' %}" class="nav-link">Contact us</a>
+            </li>
+         </ul>
+      
+      </div>
+         
+      
+      </div>
+    </nav>
+    
+    <section class="bg-light py-5" >
+      <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+         <div class="text-center text-md-start">
+            <h1 class="display-4 fw-bold text-success" >
+               Welcome to Arian Hospital
+            </h1>
+            <p class="lead text-muted mb-4">
+               Your health is our priority. We provide quality, compassionate, and affordable heathcare for you and your family.
+            </p>
+            <a href="{% url 'Appointments' %}" class="btn btn-success btn-lg">
+               Book an Appointment
+            </a>
+         </div>
+         <div class="container-fluid p-0">
+  <img src="{% static 'Images/arian_doc.jpg' %}" 
+       class="img-fluid w-100 rounded-4" 
+       style="max-height: 90vh; object-fit: cover;">
+</div>
+
+      </div>
+    </section>
+    <section class="bg-info-subtle mpy-5">
+      <div class=" container-fluid ">
+         <div class="row align-items-center ">
+
+            <div class="col-md-6 mb-4 mb-md-0">
+               <img src="{% static 'Images/hos2.png' %}" alt="hospital_building"  width="800" height="800"class="img-fluid rounded shadow-sm ">
+            </div>
+
+            <div class="col-md-6">
+         <h2 class="fw-bold text-success mb-4">
+            About us
+         </h2>
+         <p class="lead ">
+            Arian Hospital is a trusted healthcare center committed to providing quality and compassionate medical services. We combine modern facilities, skilled doctors, and personalized care to ensure every patient receives the best treatment and experience.
+         </p>
+            <a href="{% url 'About' %}" >learn more</a>
+            </div>
+         </div>
+      </div>
+    </section>
+    <section class="py-5 bg-white">
+      <div class="container-fluid text-center">
+         <h2 class="fw-bold text-success mb-4">Our Key Services</h2>
+         <p class="mb-5">
+            We provide a wide range of healthcare services designed to meet all your medical needs.
+         </p>
+
+         <div class="row g-4">
+
+            <div class="col-md-4">
+        <div class="card  shadow-sm border-0 position-relative overflow-hidden">
+          <img src="{% static 'Images/Emergency.png' %}" class="card-img-top "height=400 width="400" alt="Outpatient Services">
+          <div class="card-body bg-primary-subtle">
+            <h5 class="fw-bold text-danger mb-2">Emergency Services</h5>
+            <p>Fast and efficient medical consultations with minimal waiting times for all patients.</p>
+          </div>
+          
+        </div>
+      </div>
+               
+          
+        <div class="col-md-4">
+        <div class="card  shadow-sm border-0 position-relative overflow-hidden">
+          <img src="{% static 'Images/lab.png' %}" class="card-img-top "height=400 width="400" alt="Outpatient Services">
+          <div class="card-body bg-primary-subtle">
+            <h5 class="fw-bold text-success mb-2">Laboratory Services</h5>
+            <p>Accurate diagnostic tests for fast and reliable results.</p>
+          </div>
+          
+        </div>
+      </div>
+
+           
+               <div class="col-md-4">
+        <div class="card  shadow-sm border-0 position-relative overflow-hidden">
+          <img src="{% static 'Images/pharmacy.png' %}" class="card-img-top "height="400" width="400" alt="Outpatient Services">
+          <div class="card-body bg-primary-subtle">
+            <h5 class="fw-bold text-success mb-2">Pharmacy</h5>
+            <p>Fully stocked with trusted medicines and expert advice.</p>
+          </div>
+          
+        </div>
+      </div>
+         <div class="mt-4">
+            
+            <a href="{% url 'Services' %}" class="btn btn-primary border text-white">View All Services</a>
+         </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white ">
+      <div class="container-fluid text-center ">
+         <h2 class="text-success fw-bold text-center mb-5">Our Departments</h2>
+      <div class="row g-4">
+
+        {% for dept in departments %}
+        <div class="col-md-4 col-lg-3">
+          <div class="card p-4 border rounded shadow-sm department-box">
+            <h5 class="mb-5 fw-bold">{{ dept.name }}</h5>
+            <p>{{ dept.description }}</p>
+            {% if dept.head %}<p class="mb-1">Head: {{ dept.head }}</p>{% endif %}
+            {% if dept.contact %}<p class="text-primary">Contact: {{ dept.contact }}</p>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+
+        <div class="col-md-4 col-lg-3">
+          <div class="text-center">
+            <a href="{% url 'Departments' %}" class=" fw-bold btn btn-outline-success   text-sucess border rounded">More Departments</a>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        {% for doc in doctors %}
+        <div class="col-md-4">
+          <div class="card shadow-sm text-center h-100">
+            {% if doc.image %}
+              <img src="{% static doc.image %}" class="card-img-top rounded-circle mx-auto mt-3" alt="{{ doc.full_name }}" style="width:150px; height:150px; object-fit:cover;"
+                   onerror="this.onerror=null;this.src='/static/Images/male_photo.png';">
+            {% else %}
+            <img src="{% static 'Images/male_photo.png' %}" class="card-img-top rounded-circle mx-auto mt-3" alt="{{ doc.full_name }}" style="width:150px; height:150px; object-fit:cover;">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="fw-bold">{{ doc.full_name }}</h5>
+                {% if doc.title %}
+                    <p class="text-success fst-italic">{{ doc.title }}</p>
+                {% endif %}
+                <p>
+                    {% if doc.qualifications %}
+                        {{ doc.qualifications }} |
+                    {% endif %}
+                    {{ doc.phone }} |
+                    {% if doc.email %}
+                        <a href="mailto:{{ doc.email }}" class="text-decoration-none">{{ doc.email }}</a>
+                    {% endif %}
+                </p>
+            </div>
+
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+
+<section class="bg-success-subtle text-dark py-5">
+  <div class="container">
+    <div class="row align-items-start justify-content-between">
+
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="d-flex align-items-center mb-3">
+          <img src="{% static 'Images/Arian_logo.png' %}" alt="Arian Hospital Logo" width="70" height="70" >
+          <h4 class="fw-bold text-success mb-0">Arian Hospital</h4>
+        </div>
+        <p class="fst-italic text-muted">"Your health, our priority."</p>
+        <a href="{% url 'Appointments' %}" class="btn btn-success mt-3">Book an Appointment</a>
+      </div>
+
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold text-success mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="{% url 'Home' %}" class="text-decoration-none text-dark d-block mb-1">🏠 Home</a>
+         </li>
+          <li>
+            <a href="{% url 'About' %}" class="text-decoration-none text-dark d-block mb-1">ℹ️ About Us</a>
+         </li>
+          <li>
+            <a href="{% url 'Services' %}" class="text-decoration-none text-dark d-block mb-1">🩺 Services</a>
+         </li>
+          <li>
+            <a href="{% url 'Departments' %}" class="text-decoration-none text-dark d-block mb-1">🏥 Departments</a>
+         </li>
+          <li>
+            <a href="{% url 'Doctors' %}" class="text-decoration-none text-dark d-block mb-1">👨‍⚕️ Doctors</a>
+         </li>
+          <li>
+            <a href="{% url 'Appointments' %}" class="text-decoration-none text-dark d-block mb-1">📅 Appointments</a>
+         </li>
+          <li>
+            <a href="{% url 'Contacts' %}" class="text-decoration-none text-dark d-block">📞 Contact Us</a>
+         </li>
+        </ul>
+      </div>
+
+      
+      <div class="col-md-4">
+        <h5 class="fw-bold text-success mb-3">Contact Information</h5>
+        {% if site_contact %}
+          {% if site_contact.phone %}
+            <p><i class="bi bi-telephone-fill text-success me-2"></i> {{ site_contact.phone }}</p>
+          {% endif %}
+          {% if site_contact.email %}
+            <p><i class="bi bi-envelope-fill text-success me-2"></i> {{ site_contact.email }}</p>
+          {% endif %}
+          {% if site_contact.address %}
+            <p><i class="bi bi-geo-alt-fill text-success me-2"></i> {{ site_contact.address }}</p>
+          {% endif %}
+          {% if site_contact.opening_hours %}
+            <p><i class="bi bi-clock-fill text-success me-2"></i> {{ site_contact.opening_hours }}</p>
+          {% endif %}
+        {% else %}
+          <p>cant display contact Information</p>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="bg-success text-white text-center text-md-start py-3 mt-4 position-relative">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+      <p class="mb-0">&copy; 2025 Arian Hospital. All rights reserved.</p>
+      <p class="mb-0 small position-md-absolute bottom-0 end-0 me-md-3">
+        Created by <span class="fw-bold text-light">Anita Muthike</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ </body>
+ </html>

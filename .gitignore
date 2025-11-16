@@ -1,0 +1,46 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.py[cod]
+*.log
+*.sqlite3
+*.db
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.mo
+db.sqlite3
+media/
+staticfiles/
+*.cover
+coverage.xml
+*.egg-info/
+*.eggs/
+*.pytest_cache/
+celerybeat-schedule
+*.pid
+*.swp
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Secrets (optional)
+# settings.py (if you want to keep local secrets safe)
+# config/settings_local.py
